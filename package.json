@@ -1,7 +1,7 @@
 {
   "name": "aragog",
   "description": "A crawler",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "zhongzhiqiang<zqzhong1211@163.com>",
   "license": "MIT",
   "scripts": {
