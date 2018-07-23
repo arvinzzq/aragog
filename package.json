@@ -2,6 +2,7 @@
   "name": "aragog",
   "description": "A crawler",
   "version": "0.0.2",
+  "repository": "git@github.com:zz1211/Aragog.git",
   "author": "zhongzhiqiang<zqzhong1211@163.com>",
   "license": "MIT",
   "scripts": {
