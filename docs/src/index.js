@@ -23,4 +23,4 @@ const aragog = new Aragog({
   } while (list.length > 0)
   fs.writeFileSync(path.resolve(process.cwd(), './issues.json'), JSON.stringify(issueList, null, 4), 'utf8');
   await aragog.closeBrowser();
-})()
+})();

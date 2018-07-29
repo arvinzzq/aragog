@@ -29,6 +29,7 @@ export default class Aragog {
     });
 
     this.page = await this.browser.newPage();
+    this.page.on('console', consoleObj => console.log(consoleObj._text));
     console.info('open new page ->');
   }
 
@@ -44,8 +45,8 @@ export default class Aragog {
       const list = [];
       for (let i = 0; i < len; i++) {
         list.push({
-          title: domList[i].innerText,
-          href: domList[i].href
+          title: domList[i].innerText.trim(),
+          href: domList[i].href.trim()
         });
       }
       return list;
