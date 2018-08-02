@@ -44,9 +44,19 @@ export default class Aragog {
       const len = domList.length;
       const list = [];
       for (let i = 0; i < len; i++) {
+        const nextElement = domList[i].nextElementSibling;
+        const labels = [];
+        if (nextElement && nextElement.classList.contains('labels')) {
+          const labelDomList = nextElement ? nextElement.children : [];
+          const nums = labelDomList.length;
+          for (let j = 0; j < nums; j++) {
+            labels.push(labelDomList[j].innerText.trim());
+          }
+        }
         list.push({
           title: domList[i].innerText.trim(),
-          href: domList[i].href.trim()
+          href: domList[i].href.trim(),
+          labels
         });
       }
       return list;

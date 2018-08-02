@@ -67,7 +67,7 @@ var aragog = new _aragog2.default({
           }
 
         case 10:
-          _fs2.default.writeFileSync(_path2.default.resolve(process.cwd(), './issues.json'), (0, _stringify2.default)(issueList, null, 4), 'utf8');
+          _fs2.default.writeFileSync(_path2.default.resolve(process.cwd(), './issues.json'), (0, _stringify2.default)(issueList, null, 2), 'utf8');
           _context.next = 13;
           return aragog.closeBrowser();
 
