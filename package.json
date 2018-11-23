@@ -6,6 +6,7 @@
   "author": "zhongzhiqiang<zqzhong1211@163.com>",
   "license": "MIT",
   "scripts": {
+    "issue": "node docs/dist/index.js",
     "dev": "babel docs/src -d docs/dist --watch",
     "build": "babel src -d lib",
     "release": "npm run build && npm publish"

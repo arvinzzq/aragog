@@ -14,7 +14,8 @@ import path from 'path';
 import Aragog from 'aragog';
 const aragog = new Aragog({
   username: 'zz1211',
-  repository: 'Doraemon'
+  repository: 'Doraemon',
+  selector: `div[id^=issue_] a[href*="/zz1211/Doraemon/issues/"][id^=issue-id-]` // optional parameters
 });
 
 (async () => {
@@ -47,7 +48,7 @@ const aragog = new Aragog({
     "labels": [
       "blog",
       "javascript",
-      "top"
+      "zon"
     ]
   },
   {
@@ -86,7 +87,7 @@ const aragog = new Aragog({
     "labels": [
       "blog",
       "tool",
-      "top"
+      "zon"
     ]
   },
   {
@@ -129,7 +130,7 @@ const aragog = new Aragog({
     "labels": [
       "blog",
       "source code",
-      "top"
+      "zon"
     ]
   },
   {
@@ -138,7 +139,7 @@ const aragog = new Aragog({
     "labels": [
       "blog",
       "source code",
-      "top"
+      "zon"
     ]
   },
   {
@@ -147,7 +148,7 @@ const aragog = new Aragog({
     "labels": [
       "blog",
       "source code",
-      "top"
+      "zon"
     ]
   },
   {
@@ -164,7 +165,8 @@ const aragog = new Aragog({
     "labels": [
       "blog",
       "source code",
-      "top"
+      "stick",
+      "zon"
     ]
   },
   {
@@ -173,7 +175,7 @@ const aragog = new Aragog({
     "labels": [
       "blog",
       "source code",
-      "top"
+      "zon"
     ]
   },
   {
@@ -208,7 +210,7 @@ const aragog = new Aragog({
     "labels": [
       "blog",
       "source code",
-      "top"
+      "zon"
     ]
   },
   {
@@ -217,7 +219,7 @@ const aragog = new Aragog({
     "labels": [
       "blog",
       "javascript",
-      "top"
+      "zon"
     ]
   }
 ]

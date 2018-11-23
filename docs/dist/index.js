@@ -28,7 +28,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var aragog = new _aragog2.default({
   username: 'zz1211',
-  repository: 'Doraemon'
+  repository: 'Doraemon',
+  selector: 'div[id^=issue_] a[href*="/zz1211/Doraemon/issues/"][id^=issue-id-]'
 });
 
 (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee() {
@@ -67,11 +68,12 @@ var aragog = new _aragog2.default({
           }
 
         case 10:
+          console.log('issueList ===> ', issueList);
           _fs2.default.writeFileSync(_path2.default.resolve(process.cwd(), './issues.json'), (0, _stringify2.default)(issueList, null, 2), 'utf8');
-          _context.next = 13;
+          _context.next = 14;
           return aragog.closeBrowser();
 
-        case 13:
+        case 14:
         case 'end':
           return _context.stop();
       }

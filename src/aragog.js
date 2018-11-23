@@ -34,13 +34,13 @@ export default class Aragog {
   }
 
   async fetchIssueList(options) {
-    const { username = '', repository = '', queryConditions = {} } = {...this.config, ...options};
+    const { username = '', repository = '', queryConditions = {}, selector } = {...this.config, ...options};
     const url = this.generateUrl(`https://github.com/${username}/${repository}/issues`, queryConditions);
     console.info(`Fetch issue list ->\nurl: ${url}`);
     await this.page.goto(url, {waitUntil: 'networkidle2'});
     const issueList = await this.page.evaluate(args => {
-      const { username, repository } = args;
-      const domList = document.querySelectorAll(`li[id^=issue_] a[href*="/${username}/${repository}/issues/"]`);
+      const { username, repository, selector } = args;
+      const domList = document.querySelectorAll(selector || `li[id^=issue_] a[href*="/${username}/${repository}/issues/"]`);
       const len = domList.length;
       const list = [];
       for (let i = 0; i < len; i++) {
@@ -60,7 +60,7 @@ export default class Aragog {
         });
       }
       return list;
-    }, { username, repository });
+    }, { username, repository, selector });
     console.info('Issue list fetched ->');
     return issueList;
   }

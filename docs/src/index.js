@@ -3,7 +3,8 @@ import path from 'path';
 import Aragog from '../../lib/aragog';
 const aragog = new Aragog({
   username: 'zz1211',
-  repository: 'Doraemon'
+  repository: 'Doraemon',
+  selector: `div[id^=issue_] a[href*="/zz1211/Doraemon/issues/"][id^=issue-id-]`
 });
 
 (async () => {
@@ -21,6 +22,7 @@ const aragog = new Aragog({
     });
     issueList = issueList.concat(list)
   } while (list.length > 0)
+  console.log('issueList ===> ', issueList);
   fs.writeFileSync(path.resolve(process.cwd(), './issues.json'), JSON.stringify(issueList, null, 2), 'utf8');
   await aragog.closeBrowser();
 })();
